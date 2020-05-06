@@ -1,10 +1,15 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
-
+//https://cses.fi/problemset/task/1648
+//#tech_debt
+#include <bits/stdc++.h>
 using namespace std;
 
+#define ios_b                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+
 typedef long long ll;
+typedef long double ld;
 typedef unsigned long long ull;
 
 void refresh(vector<ull> &v, ll i, ll K)
@@ -69,11 +74,6 @@ void solve()
 
     loadtree(v, osn / 2, (2 * osn - 1) / 2);
 
-    // cout << v[1] << endl;
-    // cout << v[2] << " " << v[3] << endl;
-    // cout << v[4] << " " << v[5] << " " << v[6] << " " << v[7] << endl;
-    // cout << v[8] << " " << v[9] << " " << v[10] << " " << v[11] << " " << v[12] << " " << v[13] << " " << v[14] << " " << v[15] << endl;
-
     ll x1, x2, x3;
     for (ll i = 1; i <= y; i++)
     {
@@ -89,9 +89,11 @@ void solve()
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    ios_b;
+#ifdef _DEBUG
+    freopen("input-1.txt", "r", stdin);
+    //freopen("output-1.txt", "w", stdout);
+#endif
     solve();
     return 0;
 }

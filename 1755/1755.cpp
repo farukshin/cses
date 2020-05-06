@@ -1,6 +1,14 @@
-#include <iostream>
-
+//https://cses.fi/problemset/task/1755
+#include <bits/stdc++.h>
 using namespace std;
+
+#define ios_b                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+
+typedef long long ll;
+typedef long double ld;
 
 string strchar(char ch, int k)
 {
@@ -12,7 +20,7 @@ string strchar(char ch, int k)
     return r;
 }
 
-int main()
+void solve()
 {
     string s, beg, end, s0;
     int i = 0, k1 = 0;
@@ -45,5 +53,15 @@ int main()
         cout << "NO SOLUTION";
     else
         cout << beg << s0 << end << endl;
+}
+
+int main()
+{
+    ios_b;
+#ifdef _DEBUG
+    freopen("input-1.txt", "r", stdin);
+    //freopen("output-1.txt", "w", stdout);
+#endif
+    solve();
     return 0;
 }

@@ -1,30 +1,60 @@
-#include <iostream>
-#include <set>
+//https://cses.fi/problemset/task/1091
+#include <bits/stdc++.h>
 using namespace std;
-int main()
+
+#define ios_b                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+
+typedef long long ll;
+typedef long double ld;
+
+void solve()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n = 0, m = 0, x = 0;
+    int n, m;
     cin >> n >> m;
-    multiset<int, greater<int>> h;
-    while (n--)
+
+    int tick[n];
+    int cust[m];
+    for (int i = 0; i < n; ++i)
     {
-        cin >> x;
-        h.insert(x);
+        cin >> tick[i];
     }
-    while (m--)
+    for (int i = 0; i < m; ++i)
     {
-        cin >> x;
-        auto it = h.lower_bound(x);
-        if (it == h.end())
-            cout << "-1\n";
-        else
-        {
-            cout << *it << endl;
-            h.erase(it);
-        }
+        cin >> cust[i];
     }
 
+    sort(tick, tick + n);
+
+    int done[n] = {0};
+    for (int i = 0; i < m; ++i)
+    {
+        int ans = -1;
+        int opos = upper_bound(tick, tick + n, cust[i]) - tick - 1;
+        int pos = opos;
+        while (done[pos] && pos >= 0)
+        {
+            pos -= done[pos];
+        }
+        if (pos >= 0)
+        {
+            ans = tick[pos];
+            done[opos] = opos - pos;
+            done[pos] = 1;
+        }
+        cout << ans << endl;
+    }
+}
+
+int main()
+{
+    ios_b;
+#ifdef _DEBUG
+    freopen("input-1.txt", "r", stdin);
+    //freopen("output-1.txt", "w", stdout);
+#endif
+    solve();
     return 0;
 }

@@ -1,3 +1,4 @@
+//https://cses.fi/problemset/task/1633
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,6 +30,10 @@ void solve()
 int main()
 {
     ios_b;
+#ifdef _DEBUG
+    freopen("input-1.txt", "r", stdin);
+    //freopen("output-1.txt", "w", stdout);
+#endif
     solve();
     return 0;
 }

@@ -1,7 +1,16 @@
-#include <iostream>
+//https://cses.fi/problemset/task/1618
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
+#define ios_b                         \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+
+typedef long long ll;
+typedef long double ld;
+
+void solve()
 {
     long long n = 0, res = 0;
     cin >> n;
@@ -12,5 +21,15 @@ int main()
         res += n;
     }
     cout << res << endl;
+}
+
+int main()
+{
+    ios_b;
+#ifdef _DEBUG
+    freopen("input-1.txt", "r", stdin);
+    //freopen("output-1.txt", "w", stdout);
+#endif
+    solve();
     return 0;
 }
