@@ -1,4 +1,4 @@
-//https://cses.fi/problemset/task/
+//https://cses.fi/problemset/task/1643
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,7 +12,17 @@ typedef long double ld;
 
 void solve()
 {
-    ;
+    int n;
+    cin >> n;
+    vector<ll> v(n);
+    ll ans = LONG_LONG_MIN, cur = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+        cur = max(cur + v[i], v[i]);
+        ans = max(ans, cur);
+    }
+    cout << ans << endl;
 }
 
 int main()
