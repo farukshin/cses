@@ -8,9 +8,9 @@
 | [Missing Number](https://cses.fi/problemset/task/1083)            | [1083.cpp](./1083/1083.cpp) |       |        |         |
 | [Repetitions](https://cses.fi/problemset/task/1069)               | [1069.cpp](./1069/1069.cpp) |       |        |         |
 | [Increasing Array](https://cses.fi/problemset/task/1094)          | [1094.cpp](./1094/1094.cpp) |       |        |         |
-| [Permutations](https://cses.fi/problemset/task/1070)              |                             |       |        |         |
+| [Permutations](https://cses.fi/problemset/task/1070)              | [1070.cpp](./1070/1070.cpp) |       |        |         |
 | [Number Spiral](https://cses.fi/problemset/task/1071)             | [1071.cpp](./1071/1071.cpp) |       |        |         |
-| [Two Knights](https://cses.fi/problemset/task/1072)               |                             |       |        |         |
+| [Two Knights](https://cses.fi/problemset/task/1072)               | [1072.cpp](./1072/1072.cpp) |       |        |         |
 | [Two Sets](https://cses.fi/problemset/task/1092)                  | [1092.cpp](./1092/1092.cpp) |       |        |         |
 | [Bit Strings](https://cses.fi/problemset/task/1617)               | [1617.cpp](./1617/1617.cpp) |       |        |         |
 | [Trailing Zeros](https://cses.fi/problemset/task/1618)            | [1618.cpp](./1618/1618.cpp) |       |        |         |
@@ -19,7 +19,7 @@
 | [Creating Strings I](https://cses.fi/problemset/task/1622)        | [1622.cpp](./1622/1622.cpp) |       |        |         |
 | [Apple Division](https://cses.fi/problemset/task/1623)            | [1623.cpp](./1623/1623.cpp) |       |        |         |
 | [Chessboard and Queens](https://cses.fi/problemset/task/1624)     |                             |       |        |         |
-| [Grid Paths](https://cses.fi/problemset/task/1625)                |                             |       |        |         |
+| [Grid Paths](https://cses.fi/problemset/task/1625)                | [1625.cpp](./1625/1625.cpp) |       |        |         |
 | **Sorting and Searching**                                         |
 | [Distinct Numbers](https://cses.fi/problemset/task/1621)          | [1621.cpp](./1621/1621.cpp) |       |        |         |
 | [Apartments](https://cses.fi/problemset/task/1084)                | [1084.cpp](./1084/1084.cpp) |       |        |         |
@@ -28,7 +28,7 @@
 | [Restaurant Customers](https://cses.fi/problemset/task/1619)      | [1619.cpp](./1619/1619.cpp) |       |        |         |
 | [Movie Festival](https://cses.fi/problemset/task/1629)            | [1629.cpp](./1629/1629.cpp) |       |        |         |
 | [Sum of Two Values](https://cses.fi/problemset/task/1640)         | [1640.cpp](./1640/1640.cpp) |       |        |         |
-| [Maximum Subarray Sum](https://cses.fi/problemset/task/1643)      |                             |       |        |         |
+| [Maximum Subarray Sum](https://cses.fi/problemset/task/1643)      | [1643.cpp](./1643/1643.cpp) |       |        |         |
 | [Stick Lengths](https://cses.fi/problemset/task/1074)             | [1074.cpp](./1074/1074.cpp) |       |        |         |
 | [Playlist](https://cses.fi/problemset/task/1141)                  | [1141.cpp](./1141/1141.cpp) |       |        |         |
 | [Towers](https://cses.fi/problemset/task/1073)                    |                             |       |        |         |
@@ -40,14 +40,14 @@
 | [Sum of Three Values](https://cses.fi/problemset/task/1641)       | [1641.cpp](./1641/1641.cpp) |       |        |         |
 | [Sum of Four Values](https://cses.fi/problemset/task/1642)        | [1642.cpp](./1642/1642.cpp) |       |        |         |
 | [Nearest Smaller Values](https://cses.fi/problemset/task/1645)    |                             |       |        |         |
-| [Subarray Sums I](https://cses.fi/problemset/task/1660)           |                             |       |        |         |
-| [Subarray Sums II](https://cses.fi/problemset/task/1661)          |                             |       |        |         |
-| [Subarray Divisibility](https://cses.fi/problemset/task/1662)     |                             |       |        |         |
+| [Subarray Sums I](https://cses.fi/problemset/task/1660)           | [1660.cpp](./1660/1660.cpp) |       |        |         |
+| [Subarray Sums II](https://cses.fi/problemset/task/1661)          | [1661.cpp](./1661/1661.cpp) |       |        |         |
+| [Subarray Divisibility](https://cses.fi/problemset/task/1662)     | [1662.cpp](./1662/1662.cpp) |       |        |         |
 | [Array Division](https://cses.fi/problemset/task/1085)            |                             |       |        |         |
 | [Sliding Median](https://cses.fi/problemset/task/1076)            |                             |       |        |         |
 | [Sliding Cost](https://cses.fi/problemset/task/1077)              |                             |       |        |         |
 | [Movie Festival II](https://cses.fi/problemset/task/1632)         |                             |       |        |         |
-| [Maximum Subarray Sum II](https://cses.fi/problemset/task/1644)   |                             |       |        |         |
+| [Maximum Subarray Sum II](https://cses.fi/problemset/task/1644)   | [1644.cpp](./1644/1644.cpp) |       |        |         |
 | **Dynamic Programming**                                           |
 | [Dice Combinations](https://cses.fi/problemset/task/1633)         | [1633.cpp](./1633/1633.cpp) |       |        |         |
 | [Minimizing Coins](https://cses.fi/problemset/task/1634)          |                             |       |        |         |
