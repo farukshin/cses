@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1722
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,19 +9,40 @@ using namespace std;
 
 typedef long long ll;
 typedef long double ld;
+typedef unsigned long long ull;
 
-int fib(int n)
+ull fib(ull n)
 {
-    int mod = 1e9 + 7;
-    if (n < 2)
-        return (n >= 0 ? n : 0);
+    ull a = 1, ta,
+        b = 1, tb,
+        c = 1, rc = 0, tc,
+        d = 0, rd = 1;
 
-    return (fib(n - 1) + fib(n - 2)) % mod;
+    int mod = 1e9 + 7;
+
+    while (n)
+    {
+        if (n & 1)
+        {
+            tc = rc;
+            rc = (rc * a + rd * c) % mod;
+            rd = (tc * b + rd * d) % mod;
+        }
+        ta = a;
+        tb = b;
+        tc = c;
+        a = (a * a + b * c) % mod;
+        b = (ta * b + b * d) % mod;
+        c = (c * ta + d * c) % mod;
+        d = (tc * tb + d * d) % mod;
+        n >>= 1;
+    }
+    return rc;
 }
 
 void solve()
 {
-    int n;
+    ull n;
     cin >> n;
     cout << fib(n) << endl;
 }
