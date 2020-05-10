@@ -133,15 +133,15 @@
 | [Distinct Colors](https://cses.fi/problemset/task/1139)           |                             |       |        |         |
 | **Mathematics**                                                   |
 | [Exponentiation](https://cses.fi/problemset/task/1095)            | [1095.cpp](./1095/1095.cpp) |       |        |         |
-| [Exponentiation II](https://cses.fi/problemset/task/1712)         |                             |       |        |         |
-| [Counting Divisors](https://cses.fi/problemset/task/1713)         |                             |       |        |         |
-| [Common Divisors](https://cses.fi/problemset/task/1081)           |                             |       |        |         |
-| [Sum of Divisors](https://cses.fi/problemset/task/1082)           |                             |       |        |         |
+| [Exponentiation II](https://cses.fi/problemset/task/1712)         | [1712.cpp](./1712/1712.cpp) |       |        |         |
+| [Counting Divisors](https://cses.fi/problemset/task/1713)         | [1713.cpp](./1713/1713.cpp) |       |        |         |
+| [Common Divisors](https://cses.fi/problemset/task/1081)           | [1081.cpp](./1081/1081.cpp) |       |        |         |
+| [Sum of Divisors](https://cses.fi/problemset/task/1082)           | [1082.cpp](./1082/1082.cpp) |       |        |         |
 | [Binomial Coefficients](https://cses.fi/problemset/task/1079)     |                             |       |        |         |
 | [Creating Strings II](https://cses.fi/problemset/task/1715)       |                             |       |        |         |
 | [Distributing Apples](https://cses.fi/problemset/task/1716)       |                             |       |        |         |
 | [Christmas Party](https://cses.fi/problemset/task/1717)           |                             |       |        |         |
-| [Fibonacci Numbers](https://cses.fi/problemset/task/1722)         |                             |       |        |         |
+| [Fibonacci Numbers](https://cses.fi/problemset/task/1722)         | [1722.cpp](./1722/1722.cpp) |       |        |         |
 | [Throwing Dice](https://cses.fi/problemset/task/1096)             |                             |       |        |         |
 | [Graph Paths I](https://cses.fi/problemset/task/1723)             |                             |       |        |         |
 | [Graph Paths II](https://cses.fi/problemset/task/1724)            |                             |       |        |         |
