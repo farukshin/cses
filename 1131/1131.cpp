@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1131
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,7 +16,9 @@ vector<vector<int>> v(MAXARR);
 int dfs(int startNode, bool last)
 {
     bool used[MAXARR];
-    vector<int> dist(MAXARR);
+    memset(used, false, sizeof(used));
+
+    vector<int> dist(MAXARR, 0);
 
     queue<int> q;
     q.push(startNode);
@@ -25,17 +26,16 @@ int dfs(int startNode, bool last)
     int maxStep = 0;
     int farthestNode = 0;
 
-    used[startNode] = true;
     while (!q.empty())
     {
         auto u = q.front();
         q.pop();
+        used[u] = true;
 
         for (auto child : v[u])
         {
             if (!used[child])
             {
-                used[child] = true;
                 q.push(child);
 
                 dist[child] += dist[u] + 1;
