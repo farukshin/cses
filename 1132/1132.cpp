@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1132
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,41 +14,38 @@ const int MAXARR = 2e5 + 5;
 vector<int> ans(MAXARR, 0);
 vector<vector<int>> v(MAXARR);
 
-void dfs(int startNode, bool repeat = false)
+int dfs(int startNode, bool calc)
 {
     bool used[MAXARR];
+    memset(used, false, sizeof(used));
+
+    vector<int> step(MAXARR, 0);
 
     queue<int> q;
     q.push(startNode);
 
-    int maxStep = 0;
     int farthestNode = 0;
 
-    used[startNode] = true;
     while (!q.empty())
     {
         auto u = q.front();
         q.pop();
+        used[u] = true;
 
         for (auto child : v[u])
         {
             if (!used[child])
             {
-                used[child] = true;
                 q.push(child);
-
-                ans[child] += ans[u] + 1;
-                if (ans[child] > maxStep)
-                {
-                    maxStep = ans[child];
-                    farthestNode = child;
-                }
+                step[child] += step[u] + 1;
+                farthestNode = child;
+                if (calc)
+                    ans[child] = max(ans[child], step[child]);
             }
         }
     }
 
-    if (!repeat)
-        dfs(farthestNode, true);
+    return farthestNode;
 }
 
 void solve()
@@ -65,7 +61,9 @@ void solve()
         v[b].push_back(a);
     }
 
-    dfs(1);
+    int last = dfs(1, false);
+    int last2 = dfs(last, true);
+    last = dfs(last2, true);
 
     for (int i = 1; i <= n; i++)
         cout << ans[i] << " ";
