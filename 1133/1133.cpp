@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1133
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
