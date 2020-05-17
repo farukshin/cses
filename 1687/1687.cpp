@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1687
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,48 +10,39 @@ using namespace std;
 typedef long long ll;
 typedef long double ld;
 
-int MAXARR = 2e5 + 5;
-vector<vector<int>> v(MAXARR);
-vector<int> boss(MAXARR, -1);
-
-void dfs(int node, int parent = -1)
-{
-    for (int child : v[node])
-    {
-        boss[child] = node;
-        dfs(child, node);
-    }
-}
-
-int getBoss(int emp, int up)
-{
-    int ans = -1;
-    while (up--)
-    {
-        ans = boss[emp];
-        emp = ans;
-    }
-    return ans;
-}
+const int MAXARR = 2e5 + 5;
+int ans[MAXARR][20];
 
 void solve()
 {
     int n, q;
     cin >> n >> q;
+
+    memset(ans, -1, sizeof(ans));
+
     int cur;
     for (int i = 2; i <= n; i++)
     {
         cin >> cur;
-        //v[cur].push_back(i);
-        boss[i] = cur;
+        ans[i][0] = cur;
     }
-    //dfs(1);
 
-    int up;
+    for (int j = 1; j < 20; j++)
+        for (int i = 1; i <= n; i++)
+            if (ans[i][j - 1] != -1 && ans[ans[i][j - 1]][j - 1] != -1)
+                ans[i][j] = ans[ans[i][j - 1]][j - 1];
+
     while (q--)
     {
+
+        int up;
         cin >> cur >> up;
-        cout << getBoss(cur, up) << endl;
+
+        for (int i = 19; i >= 0; i--)
+            if ((1 << i) & up && cur != -1)
+                cur = ans[cur][i];
+
+        cout << cur << endl;
     }
 }
 
