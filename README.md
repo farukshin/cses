@@ -120,7 +120,7 @@
 | [Range Queries and Copies](https://cses.fi/problemset/task/1737)  |                             |       |        |         |
 | **Tree Algorithms**                                               |
 | [Subordinates](https://cses.fi/problemset/task/1674)              | [1674.cpp](./1674/1674.cpp) |       |        |         |
-| [Tree Matching](https://cses.fi/problemset/task/1130)             |                             |       |        |         |
+| [Tree Matching](https://cses.fi/problemset/task/1130)             | [1130.cpp](./1130/1130.cpp) |       |        |         |
 | [Tree Diameter](https://cses.fi/problemset/task/1131)             | [1131.cpp](./1131/1131.cpp) |       |        |         |
 | [Tree Distances I](https://cses.fi/problemset/task/1132)          | [1132.cpp](./1132/1132.cpp) |       |        |         |
 | [Tree Distances II](https://cses.fi/problemset/task/1133)         | [1133.cpp](./1133/1133.cpp) |       |        |         |
