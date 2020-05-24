@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1158
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,26 +10,30 @@ using namespace std;
 typedef long long ll;
 typedef long double ld;
 
+const int MAXARR = 1e5 + 5;
+vector<int> h;
+vector<int> s;
+vector<int> dp(MAXARR, 0);
+
 void solve()
 {
-    int h[1005];
-    int s[1005];
-    int a[100005];
     int n, x;
     cin >> n >> x;
+    h.resize(n);
+    s.resize(n);
 
-    for (int i = 0; i < n; i++)
-        cin >> h[i];
+    for (auto &cur : h)
+        cin >> cur;
 
-    for (int i = 0; i < n; i++)
-        cin >> s[i];
+    for (auto &cur : s)
+        cin >> cur;
 
     for (int i = 0; i < n; i++)
         for (int j = x; j >= 1; j--)
             if (h[i] <= j)
-                a[j] = max(a[j], a[j - h[i]] + s[i]);
+                dp[j] = max(dp[j], dp[j - h[i]] + s[i]);
 
-    cout << a[x] << endl;
+    cout << dp[x] << endl;
 }
 
 int main()

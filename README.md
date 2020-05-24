@@ -126,11 +126,11 @@
 | [Tree Distances II](https://cses.fi/problemset/task/1133)         | [1133.cpp](./1133/1133.cpp) |       |        |         |
 | [Company Queries I](https://cses.fi/problemset/task/1687)         | [1687.cpp](./1687/1687.cpp) |       |        |         |
 | [Company Queries II](https://cses.fi/problemset/task/1688)        | [1688.cpp](./1688/1688.cpp) |       |        |         |
-| [Distance Queries](https://cses.fi/problemset/task/1135)          |                             |       |        |         |
+| [Distance Queries](https://cses.fi/problemset/task/1135)          | [1135.cpp](./1135/1135.cpp) |       |        |         |
 | [Counting Paths](https://cses.fi/problemset/task/1136)            |                             |       |        |         |
 | [Subtree Queries](https://cses.fi/problemset/task/1137)           |                             |       |        |         |
 | [Path Queries](https://cses.fi/problemset/task/1138)              |                             |       |        |         |
-| [Distinct Colors](https://cses.fi/problemset/task/1139)           |                             |       |        |         |
+| [Distinct Colors](https://cses.fi/problemset/task/1139)           | [1139.cpp](./1139/1139.cpp) |       |        |         |
 | **Mathematics**                                                   |
 | [Exponentiation](https://cses.fi/problemset/task/1095)            | [1095.cpp](./1095/1095.cpp) |       |        |         |
 | [Exponentiation II](https://cses.fi/problemset/task/1712)         | [1712.cpp](./1712/1712.cpp) |       |        |         |
@@ -149,10 +149,10 @@
 | [Moving Robots](https://cses.fi/problemset/task/1726)             |                             |       |        |         |
 | [Candy Lottery](https://cses.fi/problemset/task/1727)             |                             |       |        |         |
 | [Inversion Probability](https://cses.fi/problemset/task/1728)     |                             |       |        |         |
-| [Stick Game](https://cses.fi/problemset/task/1729)                |                             |       |        |         |
-| [Nim Game I](https://cses.fi/problemset/task/1730)                |                             |       |        |         |
-| [Nim Game II](https://cses.fi/problemset/task/1098)               |                             |       |        |         |
-| [Stair Game](https://cses.fi/problemset/task/1099)                |                             |       |        |         |
+| [Stick Game](https://cses.fi/problemset/task/1729)                | [1729.cpp](./1729/1729.cpp) |       |        |         |
+| [Nim Game I](https://cses.fi/problemset/task/1730)                | [1730.cpp](./1730/1730.cpp) |       |        |         |
+| [Nim Game II](https://cses.fi/problemset/task/1098)               | [1098.cpp](./1098/1098.cpp) |       |        |         |
+| [Stair Game](https://cses.fi/problemset/task/1099)                | [1099.cpp](./1099/1099.cpp) |       |        |         |
 | **String Algorithms**                                             |
 | [Word Combinations](https://cses.fi/problemset/task/1731)         |                             |       |        |         |
 | [String Matching](https://cses.fi/problemset/task/1753)           |                             |       |        |         |
