@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1667
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,34 +11,46 @@ typedef long long ll;
 typedef long double ld;
 
 vector<vector<int>> ss;
-vector<bool> used;
-bool succes = false;
 int n, m;
-stack<pair<int, int>> st;
+vector<int> parrent, dist;
+int MAXARR = 2e5 + 5;
 
-void dfs(int node, int count)
+void bfs(int startNnode)
 {
-    used[node] = true;
+    queue<int> bfs;
+    bfs.push(startNnode);
+    parrent[1] = 1;
+    dist[1] = 0;
 
-    if (node == n)
+    while (!bfs.empty())
     {
-        succes = true;
-    }
+        int cur = bfs.front();
+        bfs.pop();
+        int d = dist[cur] + 1;
 
-    for (auto chield : ss[node])
-        if (!used[chield] && !succes)
+        for (int chield : ss[cur])
         {
-            st.push({node, chield});
-            dfs(chield, count + 1);
+            if (d >= dist[chield])
+                continue;
+
+            dist[chield] = d;
+            parrent[chield] = cur;
+            bfs.push(chield);
         }
+    }
 }
 
 void solve()
 {
     cin >> n >> m;
 
-    used.resize(n + 1);
     ss.resize(n + 1);
+    parrent.resize(n + 1);
+    parrent[1] = 0;
+    dist.resize(n + 1);
+
+    for (int i = 1; i <= n; i++)
+        dist[i] = MAXARR, parrent[i] = -1;
 
     for (int i = 0; i < m; i++)
     {
@@ -49,27 +60,20 @@ void solve()
         ss[b].push_back(a);
     }
 
-    st.push({1, 1});
-    dfs(1, 0);
+    bfs(1);
 
-    if (!succes)
+    if (dist[n] > n)
     {
         cout << "IMPOSSIBLE" << endl;
         return;
     }
 
-    int cur = n;
     stack<int> ans;
-    do
+    while (n > 1)
     {
-        auto top = st.top();
-        st.pop();
-        if (top.second == cur)
-        {
-            ans.push(top.second);
-            cur = top.first;
-        }
-    } while (cur != 1);
+        ans.push(n);
+        n = parrent[n];
+    }
     ans.push(1);
 
     cout << ans.size() << endl;
