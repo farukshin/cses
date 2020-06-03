@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1732
-// #tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,23 +14,28 @@ void solve()
 {
     string s;
     cin >> s;
-    int n, a;
-    n = s.size();
+
+    int a = 0, b = 0;
+    int n = s.size();
+    vector<int> v(n), ans;
     for (int i = 1; i < n; i++)
     {
-        a = i;
-        bool fl = true;
-        while (a--)
+        v[i] = max(0, min(v[i - a], b - i));
+        while (v[i] + i < n && s[v[i]] == s[v[i] + i])
+            v[i]++;
+
+        if (v[i] + i > b)
         {
-            if (s[a] != s[n - i + a])
-            {
-                fl = false;
-                break;
-            }
+            a = i;
+            b = v[i] + i;
         }
-        if (fl)
-            cout << i << " ";
+
+        if (v[i] + i == n)
+            ans.push_back(v[i]);
     }
+    for (int i = ans.size() - 1; i >= 0; i--)
+        cout << ans[i] << " ";
+    cout << endl;
 }
 
 int main()
