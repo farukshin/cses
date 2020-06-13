@@ -60,15 +60,15 @@
 | [Edit Distance](https://cses.fi/problemset/task/1639)             |                             |       |        |         |
 | [Rectangle Cutting](https://cses.fi/problemset/task/1744)         |                             |       |        |         |
 | [Money Sums](https://cses.fi/problemset/task/1745)                |                             |       |        |         |
-| [Removal Game](https://cses.fi/problemset/task/1097)              |                             |       |        |         |
+| [Removal Game](https://cses.fi/problemset/task/1097)              | [1097.cpp](./1097/1097.cpp) |       |        |         |
 | [Two Sets II](https://cses.fi/problemset/task/1093)               |                             |       |        |         |
-| [Increasing Subsequence](https://cses.fi/problemset/task/1145)    |                             |       |        |         |
-| [Projects](https://cses.fi/problemset/task/1140)                  |                             |       |        |         |
+| [Increasing Subsequence](https://cses.fi/problemset/task/1145)    | [1145.cpp](./1145/1145.cpp) |       |        |         |
+| [Projects](https://cses.fi/problemset/task/1140)                  | [1140.cpp](./1140/1140.cpp) |       |        |         |
 | **Graph Algorithms**                                              |
 | [Counting Rooms](https://cses.fi/problemset/task/1192)            | [1192.cpp](./1192/1192.cpp) |       |        |         |
 | [Labyrinth](https://cses.fi/problemset/task/1193)                 | [1193.cpp](./1193/1193.cpp) |       |        |         |
-| [Building Roads](https://cses.fi/problemset/task/1666)            |                             |       |        |         |
-| [Message Route](https://cses.fi/problemset/task/1667)             |                             |       |        |         |
+| [Building Roads](https://cses.fi/problemset/task/1666)            | [1666.cpp](./1666/1666.cpp) |       |        |         |
+| [Message Route](https://cses.fi/problemset/task/1667)             | [1667.cpp](./1667/1667.cpp) |       |        |         |
 | [Building Teams](https://cses.fi/problemset/task/1668)            | [1668.cpp](./1668/1668.cpp) |       |        |         |
 | [Round Trip](https://cses.fi/problemset/task/1669)                |                             |       |        |         |
 | [Monsters](https://cses.fi/problemset/task/1194)                  |                             |       |        |         |
@@ -83,13 +83,13 @@
 | [Longest Flight Route](https://cses.fi/problemset/task/1680)      |                             |       |        |         |
 | [Game Routes](https://cses.fi/problemset/task/1681)               | [1681.cpp](./1681/1681.cpp) |       |        |         |
 | [Investigation](https://cses.fi/problemset/task/1202)             |                             |       |        |         |
-| [Planets Queries I](https://cses.fi/problemset/task/1750)         |                             |       |        |         |
+| [Planets Queries I](https://cses.fi/problemset/task/1750)         | [1750.cpp](./1750/1750.cpp) |       |        |         |
 | [Planets Queries II](https://cses.fi/problemset/task/1160)        |                             |       |        |         |
 | [Planets Cycles](https://cses.fi/problemset/task/1751)            |                             |       |        |         |
 | [Road Reparation](https://cses.fi/problemset/task/1675)           |                             |       |        |         |
 | [Road Construction](https://cses.fi/problemset/task/1676)         |                             |       |        |         |
 | [Flight Routes Check](https://cses.fi/problemset/task/1682)       |                             |       |        |         |
-| [Planets and Kingdoms](https://cses.fi/problemset/task/1683)      |                             |       |        |         |
+| [Planets and Kingdoms](https://cses.fi/problemset/task/1683)      | [1683.cpp](./1683/1683.cpp) |       |        |         |
 | [Giant Pizza](https://cses.fi/problemset/task/1684)               |                             |       |        |         |
 | [Coin Collector](https://cses.fi/problemset/task/1686)            |                             |       |        |         |
 | [Mail Delivery](https://cses.fi/problemset/task/1691)             |                             |       |        |         |
