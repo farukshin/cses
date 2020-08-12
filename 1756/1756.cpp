@@ -1,4 +1,4 @@
-//https://cses.fi/problemset/task/
+//https://cses.fi/problemset/task/1756
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -7,7 +7,16 @@ typedef long double ld;
 
 void solve()
 {
-    ;
+    int n, m, a, b;
+    cin >> n >> m;
+    for (int i = 0; i < m; i++)
+    {
+        cin >> a >> b;
+        if (a > b)
+            swap(a, b);
+        cout << a << " " << b << endl;
+    }
+
 }
 
 int main()
