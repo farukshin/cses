@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1623
-// #tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,25 +13,27 @@ typedef long double ld;
 void solve()
 {
     int n;
+    ll sum = 0, ans = INT_MAX;
     cin >> n;
-    vector<ll> v(n);
+    ll arr[n];
+
     for (int i = 0; i < n; i++)
-        cin >> v[i];
-
-    sort(v.begin(), v.end(), greater<ll>());
-    int a, b = 0;
-    a = v[0];
-    for (int i = 1; i < n; i++)
     {
-
-        if (b < a)
-            b += v[i];
-        else
-            a += v[i];
-
-        cout << v[i] << " a=" << a << " b=" << b << endl;
+        cin >> arr[i];
+        sum += arr[i];
     }
-    cout << max(a, b) - min(a, b) << endl;
+
+    for (int i = 0; i < 1 << n; i++)
+    {
+        ll curSum = 0;
+        for (int j = 0; j < n; j++)
+            if (i & 1 << j)
+                curSum += arr[j];
+
+        ll curr = abs((sum - curSum) - curSum);
+        ans = min(ans, curr);
+    }
+    cout << ans << endl;
 }
 
 int main()
