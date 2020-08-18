@@ -8,58 +8,64 @@ typedef long double ld;
 
 int n, d;
 vector<vector<int>> ss;
-vector<bool> used, curUsed;
+vector<bool> used;
 stack<int> ans;
-queue<pair<int, int>> q;
-
-int getAnUsedCity(int n)
-{
-    for (int i = 1; i <= n; i++)
-        if (!used[i])
-            return i;
-    return 0;
-}
-
-int dfsLastNode(int start)
-{
-    q.push({ start, 0 });
-
-    fill(curUsed.begin(), curUsed.end(), false);
-    curUsed[start] = true;
-    int curDist = 0, lastNode = 0;
-
-    while (!q.empty())
-    {
-        auto cur = q.front();
-        q.pop();
-
-        for (auto chield : ss[cur.first])
-            if (!used[chield] && !curUsed[chield])
-            {
-                curUsed[chield] = true;
-                q.push({ chield, cur.second + 1 });
-                if (curDist < cur.second + 1)
-                {
-                    curDist = cur.second + 1;
-                    lastNode = chield;
-                }
-            }
-    }
-
-    return lastNode;
-}
+map<int, int> freeLeaves;
 
 void closeDistrict(int start, int curD = 0)
 {
-    if (curD > d || used[start])
+    if (curD > d)
         return;
 
     if (curD == 0)
         ans.push(start);
 
     used[start] = true;
+
+    freeLeaves[start]--;
+    if (freeLeaves[start] == 0)
+        freeLeaves.erase(start);
+
     for (auto chield : ss[start])
         closeDistrict(chield, curD + 1);
+}
+
+void updateLeaves(int node)
+{
+    if (!freeLeaves[node]) {
+        if (ss[node].size() == 1)
+            freeLeaves[node]++;
+    }
+    else {
+        if (ss[node].size() != 1)
+            freeLeaves.erase(freeLeaves.find(node));
+    }
+}
+
+int minCountFreeCity(int start, int curD)
+{
+
+    if (curD > d)
+        return 0;
+
+    int res = 1;
+
+    for (auto chield : ss[start])
+        res += (used[chield] ? 1 : 0) + minCountFreeCity(chield, curD + 1);
+
+    return res;
+}
+
+int bestCity()
+{
+    int res = 0, minCount = n;
+    for (auto node : freeLeaves)
+    {
+        int cur = minCountFreeCity(node.first, 0);
+        if (cur < minCount)
+            minCount = cur, res = node.first;
+    }
+    return res;
 }
 
 void solve()
@@ -67,7 +73,6 @@ void solve()
     cin >> n >> d;
     ss.resize(n + 1);
     used.resize(n + 1, false);
-    curUsed.resize(n + 1, false);
     d--;
 
     for (int i = 1; i <= n - 1; i++)
@@ -76,23 +81,12 @@ void solve()
         cin >> a >> b;
         ss[a].push_back(b);
         ss[b].push_back(a);
+        updateLeaves(a);
+        updateLeaves(b);
     }
 
-    int anUsedCity = getAnUsedCity(n);
-
-    while (anUsedCity)
-    {
-        int last1 = dfsLastNode(anUsedCity);
-        int last2 = dfsLastNode(last1);
-
-        // if (last1 == 0 || last2 == 0)
-        //     break;
-
-        closeDistrict(last2);
-        closeDistrict(last1);
-
-        anUsedCity = getAnUsedCity(n);
-    }
+    while (!freeLeaves.empty())
+        closeDistrict(bestCity());
 
     cout << ans.size() << endl;
     while (!ans.empty())
