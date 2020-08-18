@@ -8,8 +8,9 @@ typedef long double ld;
 
 int n, d;
 vector<vector<int>> ss;
-vector<bool> used;
+vector<bool> used, curUsed;
 stack<int> ans;
+queue<pair<int, int>> q;
 
 int getAnUsedCity(int n)
 {
@@ -19,14 +20,13 @@ int getAnUsedCity(int n)
     return 0;
 }
 
-int dfsLastLode(int start)
+int dfsLastNode(int start)
 {
-    queue<pair<int, int>> q;
     q.push({ start, 0 });
 
-    bool curUsed[n] = { false };
+    fill(curUsed.begin(), curUsed.end(), false);
     curUsed[start] = true;
-    int curDiam = 0, lastNode = 0;
+    int curDist = 0, lastNode = 0;
 
     while (!q.empty())
     {
@@ -38,9 +38,9 @@ int dfsLastLode(int start)
             {
                 curUsed[chield] = true;
                 q.push({ chield, cur.second + 1 });
-                if (curDiam < cur.second + 1)
+                if (curDist < cur.second + 1)
                 {
-                    curDiam = cur.second + 1;
+                    curDist = cur.second + 1;
                     lastNode = chield;
                 }
             }
@@ -49,38 +49,12 @@ int dfsLastLode(int start)
     return lastNode;
 }
 
-int diameter(int start)
-{
-    queue<pair<int, int>> q;
-    q.push({ start, 0 });
-
-    bool curUsed[n] = { false };
-    curUsed[start] = true;
-    int res = 0;
-
-    while (!q.empty())
-    {
-        auto cur = q.front();
-        q.pop();
-
-        for (auto chield : ss[cur.first])
-            if (!used[chield] && !curUsed[chield])
-            {
-                curUsed[chield] = true;
-                q.push({ chield, cur.second + 1 });
-                res = max(res, cur.second + 1);
-            }
-    }
-
-    return res;
-}
-
 void closeDistrict(int start, int curD = 0)
 {
-    if (curD > d)
+    if (curD > d || used[start])
         return;
 
-    if (!curD)
+    if (curD == 0)
         ans.push(start);
 
     used[start] = true;
@@ -93,6 +67,7 @@ void solve()
     cin >> n >> d;
     ss.resize(n + 1);
     used.resize(n + 1, false);
+    curUsed.resize(n + 1, false);
     d--;
 
     for (int i = 1; i <= n - 1; i++)
@@ -103,25 +78,18 @@ void solve()
         ss[b].push_back(a);
     }
 
-    if (diameter(1) <= d)
-    {
-        cout << 1 << endl
-            << 1 << endl;
-        return;
-    }
-
     int anUsedCity = getAnUsedCity(n);
 
     while (anUsedCity)
     {
+        int last1 = dfsLastNode(anUsedCity);
+        int last2 = dfsLastNode(last1);
 
-        int curDiameter = diameter(anUsedCity);
-        int last1 = dfsLastLode(anUsedCity);
-        int last2 = dfsLastLode(last1);
+        // if (last1 == 0 || last2 == 0)
+        //     break;
 
         closeDistrict(last2);
-        if (curDiameter > d)
-            closeDistrict(last1);
+        closeDistrict(last1);
 
         anUsedCity = getAnUsedCity(n);
     }
