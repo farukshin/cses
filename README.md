@@ -18,7 +18,7 @@
 | [Palindrome Reorder](https://cses.fi/problemset/task/1755)        | [1755.cpp](./1755/1755.cpp) |       |        |         |
 | [Creating Strings I](https://cses.fi/problemset/task/1622)        | [1622.cpp](./1622/1622.cpp) |       |        |         |
 | [Apple Division](https://cses.fi/problemset/task/1623)            | [1623.cpp](./1623/1623.cpp) |       |        |         |
-| [Chessboard and Queens](https://cses.fi/problemset/task/1624)     |                             |       |        |         |
+| [Chessboard and Queens](https://cses.fi/problemset/task/1624)     | [1624.cpp](./1624/1624.cpp) |       |        |         |
 | [Grid Paths](https://cses.fi/problemset/task/1625)                | [1625.cpp](./1625/1625.cpp) |       |        |         |
 | **Sorting and Searching**                                         |
 | [Distinct Numbers](https://cses.fi/problemset/task/1621)          | [1621.cpp](./1621/1621.cpp) |       |        |         |
@@ -35,8 +35,8 @@
 | [Traffic Lights](https://cses.fi/problemset/task/1163)            |                             |       |        |         |
 | [Room Allocation](https://cses.fi/problemset/task/1164)           |                             |       |        |         |
 | [Factory Machines](https://cses.fi/problemset/task/1620)          |                             |       |        |         |
-| [Tasks and Deadlines](https://cses.fi/problemset/task/1630)       |                             |       |        |         |
-| [Reading Books](https://cses.fi/problemset/task/1631)             |                             |       |        |         |
+| [Tasks and Deadlines](https://cses.fi/problemset/task/1630)       | [1630.cpp](./1630/1630.cpp) |       |        |         |
+| [Reading Books](https://cses.fi/problemset/task/1631)             | [1631.cpp](./1631/1631.cpp) |       |        |         |
 | [Sum of Three Values](https://cses.fi/problemset/task/1641)       | [1641.cpp](./1641/1641.cpp) |       |        |         |
 | [Sum of Four Values](https://cses.fi/problemset/task/1642)        | [1642.cpp](./1642/1642.cpp) |       |        |         |
 | [Nearest Smaller Values](https://cses.fi/problemset/task/1645)    |                             |       |        |         |
@@ -167,7 +167,7 @@
 | [Swap Game](https://cses.fi/problemset/task/1670)                 |                             |       |        |         |
 | [Meet in the Middle](https://cses.fi/problemset/task/1628)        |                             |       |        |         |
 | [Prüfer Code](https://cses.fi/problemset/task/1134)               |                             |       |        |         |
-| [Edge Directions](https://cses.fi/problemset/task/1756)           |                             |       |        |         |
+| [Edge Directions](https://cses.fi/problemset/task/1756)           | [1756.cpp](./1756/1756.cpp) |       |        |         |
 | [Advertisement](https://cses.fi/problemset/task/1142)             |                             |       |        |         |
 | [Elevator Rides](https://cses.fi/problemset/task/1653)            |                             |       |        |         |
 | [Maximum Xor Subarray](https://cses.fi/problemset/task/1655)      |                             |       |        |         |
