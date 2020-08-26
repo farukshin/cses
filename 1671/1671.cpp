@@ -1,5 +1,4 @@
 //https://cses.fi/problemset/task/1671
-//#tech_debt
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -7,7 +6,7 @@ typedef long long ll;
 typedef long double ld;
 
 vector<vector<pair<int, int>>> ss;
-vector<int> d;
+vector<ll> dist;
 vector<bool> used;
 
 void solve()
@@ -15,10 +14,8 @@ void solve()
     int n, m;
     cin >> n >> m;
     ss.resize(n);
-    d.resize(n, INT_MAX);
-    d[0] = 0;
-    used.resize(n, false);
-
+    dist.resize(n, LONG_LONG_MAX);
+    dist[0] = 0;
 
     for (int i = 0;i < m;i++)
     {
@@ -27,24 +24,30 @@ void solve()
         ss[--a].push_back({ --b, c });
     }
 
-    for (int i = 0; i < n; i++)
+    priority_queue< pair<ll, int>> q;
+    q.push(make_pair(0, 0));
+
+    while (!q.empty())
     {
-        int v = -1;
-        for (int j = 0;j < n;j++)
-            if (!used[j] && (v == -1 || d[j] < d[v]))
-                v = j;
-        if (d[v] == INT_MAX)
-            break;
+        auto u = q.top();
+        q.pop();
+        int cur = u.second;
+        if (-u.first > dist[cur])
+            continue;
 
-        used[v] = true;
-
-        for (auto chield : ss[v])
-            if (d[v] + chield.second < d[chield.first])
-                d[chield.first] = d[v] + chield.second;
+        for (auto chield : ss[cur])
+        {
+            int to = chield.first, len = chield.second;
+            if (dist[to] > dist[cur] + len)
+            {
+                dist[to] = dist[cur] + len;
+                q.push(make_pair(-dist[to], to));
+            }
+        }
     }
 
     for (int i = 0; i < n;i++)
-        cout << d[i] << " ";
+        cout << dist[i] << " ";
     cout << endl;
 
 }
