@@ -5,24 +5,10 @@ using namespace std;
 typedef long long ll;
 typedef long double ld;
 
-vector<vector<pair<int, int>>> ss;
-vector<ll> dist;
-vector<bool> used;
+void dejkstra(const vector<vector<pair<int, int>>>& ss, const int& countNode, const int& start, vector<ll>& dist) {
 
-void solve()
-{
-    int n, m;
-    cin >> n >> m;
-    ss.resize(n);
-    dist.resize(n, LONG_LONG_MAX);
+    dist.resize(countNode, LONG_LONG_MAX);
     dist[0] = 0;
-
-    for (int i = 0;i < m;i++)
-    {
-        int a, b, c;
-        cin >> a >> b >> c;
-        ss[--a].push_back({ --b, c });
-    }
 
     priority_queue< pair<ll, int>> q;
     q.push(make_pair(0, 0));
@@ -45,11 +31,30 @@ void solve()
             }
         }
     }
+}
+
+void solve()
+{
+    vector<vector<pair<int, int>>> ss;
+    vector<ll> dist;
+
+    int n, m;
+    cin >> n >> m;
+    ss.resize(n);
+
+    for (int i = 0;i < m;i++)
+    {
+        int a, b, c;
+        cin >> a >> b >> c;
+        ss[--a].push_back({ --b, c });
+    }
+
+    int start = 0;
+    dejkstra(ss, n, start, dist);
 
     for (int i = 0; i < n;i++)
         cout << dist[i] << " ";
     cout << endl;
-
 }
 
 int main()
