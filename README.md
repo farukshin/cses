@@ -16,6 +16,7 @@
 | [Trailing Zeros](https://cses.fi/problemset/task/1618)            | [1618.cpp](./1618/1618.cpp) |       |        |         |
 | [Coin Piles](https://cses.fi/problemset/task/1754)                | [1754.cpp](./1754/1754.cpp) |       |        |         |
 | [Palindrome Reorder](https://cses.fi/problemset/task/1755)        | [1755.cpp](./1755/1755.cpp) |       |        |         |
+| [Gray Code](https://cses.fi/problemset/task/2205)                 | [2205.cpp](./2205/2205.cpp) |       |        |         |
 | [Creating Strings I](https://cses.fi/problemset/task/1622)        | [1622.cpp](./1622/1622.cpp) |       |        |         |
 | [Apple Division](https://cses.fi/problemset/task/1623)            | [1623.cpp](./1623/1623.cpp) |       |        |         |
 | [Chessboard and Queens](https://cses.fi/problemset/task/1624)     | [1624.cpp](./1624/1624.cpp) |       |        |         |
@@ -54,10 +55,10 @@
 | [Coin Combinations I](https://cses.fi/problemset/task/1635)       |                             |       |        |         |
 | [Coin Combinations II](https://cses.fi/problemset/task/1636)      |                             |       |        |         |
 | [Removing Digits](https://cses.fi/problemset/task/1637)           | [1637.cpp](./1637/1637.cpp) |       |        |         |
-| [Grid Paths](https://cses.fi/problemset/task/1638)                |                             |       |        |         |
+| [Grid Paths](https://cses.fi/problemset/task/1638)                | [1638.cpp](./1638/1638.cpp) |       |        |         |
 | [Book Shop](https://cses.fi/problemset/task/1158)                 | [1158.cpp](./1158/1158.cpp) |       |        |         |
 | [Array Description](https://cses.fi/problemset/task/1746)         |                             |       |        |         |
-| [Edit Distance](https://cses.fi/problemset/task/1639)             |                             |       |        |         |
+| [Edit Distance](https://cses.fi/problemset/task/1639)             | [1639.cpp](./1639/1639.cpp) |       |        |         |
 | [Rectangle Cutting](https://cses.fi/problemset/task/1744)         |                             |       |        |         |
 | [Money Sums](https://cses.fi/problemset/task/1745)                |                             |       |        |         |
 | [Removal Game](https://cses.fi/problemset/task/1097)              | [1097.cpp](./1097/1097.cpp) |       |        |         |
