@@ -31,6 +31,8 @@
 | [Sum of Two Values](https://cses.fi/problemset/task/1640)         | [1640.cpp](./1640/1640.cpp) |       |        |         |
 | [Maximum Subarray Sum](https://cses.fi/problemset/task/1643)      | [1643.cpp](./1643/1643.cpp) |       |        |         |
 | [Stick Lengths](https://cses.fi/problemset/task/1074)             | [1074.cpp](./1074/1074.cpp) |       |        |         |
+| [Missing Coin Sum](https://cses.fi/problemset/task/2183)          | [2183.cpp](./2183/2183.cpp) |       |        |         |
+| [Collecting Numbers](https://cses.fi/problemset/task/2216)        | [2216.cpp](./2216/2216.cpp) |       |        |         |
 | [Playlist](https://cses.fi/problemset/task/1141)                  | [1141.cpp](./1141/1141.cpp) |       |        |         |
 | [Towers](https://cses.fi/problemset/task/1073)                    |                             |       |        |         |
 | [Traffic Lights](https://cses.fi/problemset/task/1163)            |                             |       |        |         |
@@ -51,8 +53,8 @@
 | [Maximum Subarray Sum II](https://cses.fi/problemset/task/1644)   | [1644.cpp](./1644/1644.cpp) |       |        |         |
 | **Dynamic Programming**                                           |
 | [Dice Combinations](https://cses.fi/problemset/task/1633)         | [1633.cpp](./1633/1633.cpp) |       |        |         |
-| [Minimizing Coins](https://cses.fi/problemset/task/1634)          |                             |       |        |         |
-| [Coin Combinations I](https://cses.fi/problemset/task/1635)       |                             |       |        |         |
+| [Minimizing Coins](https://cses.fi/problemset/task/1634)          | [1634.cpp](./1634/1634.cpp) |       |        |         |
+| [Coin Combinations I](https://cses.fi/problemset/task/1635)       | [1635.cpp](./1635/1635.cpp) |       |        |         |
 | [Coin Combinations II](https://cses.fi/problemset/task/1636)      |                             |       |        |         |
 | [Removing Digits](https://cses.fi/problemset/task/1637)           | [1637.cpp](./1637/1637.cpp) |       |        |         |
 | [Grid Paths](https://cses.fi/problemset/task/1638)                | [1638.cpp](./1638/1638.cpp) |       |        |         |
