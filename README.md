@@ -61,7 +61,7 @@
 | [Book Shop](https://cses.fi/problemset/task/1158)                 | [1158.cpp](./1158/1158.cpp) |       |        |         |
 | [Array Description](https://cses.fi/problemset/task/1746)         |                             |       |        |         |
 | [Edit Distance](https://cses.fi/problemset/task/1639)             | [1639.cpp](./1639/1639.cpp) |       |        |         |
-| [Rectangle Cutting](https://cses.fi/problemset/task/1744)         |                             |       |        |         |
+| [Rectangle Cutting](https://cses.fi/problemset/task/1744)         | [1744.cpp](./1744/1744.cpp) |       |        |         |
 | [Money Sums](https://cses.fi/problemset/task/1745)                |                             |       |        |         |
 | [Removal Game](https://cses.fi/problemset/task/1097)              | [1097.cpp](./1097/1097.cpp) |       |        |         |
 | [Two Sets II](https://cses.fi/problemset/task/1093)               |                             |       |        |         |
