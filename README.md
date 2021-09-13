@@ -1,5 +1,6 @@
 ## CSES Problem Set
 
+[farukshin](https://cses.fi/user/7057)
 
 | Name                                                              | Possible Solution           | Input | Output | Comment |
 | ----------------------------------------------------------------- | --------------------------- | ----- | ------ | ------- |
@@ -168,7 +169,7 @@
 | [Shortest Subsequence](https://cses.fi/problemset/task/1087)      |                             |       |        |         |
 | [Counting Bits](https://cses.fi/problemset/task/1146)             |                             |       |        |         |
 | [Swap Game](https://cses.fi/problemset/task/1670)                 |                             |       |        |         |
-| [Meet in the Middle](https://cses.fi/problemset/task/1628)        |                             |       |        |         |
+| [Meet in the Middle](https://cses.fi/problemset/task/1628)        | [1628.cpp](./1628/1628.cpp) |       |        |         |
 | [Prüfer Code](https://cses.fi/problemset/task/1134)               |                             |       |        |         |
 | [Edge Directions](https://cses.fi/problemset/task/1756)           | [1756.cpp](./1756/1756.cpp) |       |        |         |
 | [Advertisement](https://cses.fi/problemset/task/1142)             |                             |       |        |         |
@@ -215,3 +216,6 @@
 | [Creating Offices](https://cses.fi/problemset/task/1752)          |                             |       |        |         |
 | [Permutations II](https://cses.fi/problemset/task/1075)           |                             |       |        |         |
 | [New Flight Routes](https://cses.fi/problemset/task/1685)         |                             |       |        |         |
+| [Cut and Paste](https://cses.fi/problemset/task/2072)             | [2072.cpp](./2072/2072.cpp) |       |        |         |
+| [Substring Reversals](https://cses.fi/problemset/task/2073)       | [2073.cpp](./2073/2073.cpp) |       |        |         |
+| [Reversals and Sums](https://cses.fi/problemset/task/2074)        | [2074.cpp](./2074/2074.cpp) |       |        |         |
