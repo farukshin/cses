@@ -1,0 +1,1 @@
+find -type f -name "*.cpp" -exec sed -i -r 's/\r/\n/g' {} \;
